@@ -21,8 +21,8 @@ if __name__ == "__main__":
         sys.exit(1)
     speaker_name = sys.argv[1]
 
-    wav_dir = "raw"
-    output_file = "text.list"
+    wav_dir = "/content/slice-and-transcribe/raw"
+    output_file = "/content/slice-and-transcribe/text.list"
     initial_prompt = "こんにちは。元気、ですかー？私は……ちゃんと元気だよ！"
 
     wav_files = [

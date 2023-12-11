@@ -42,7 +42,7 @@ def get_stamps(audio_file, min_silence_dur_ms=700, min_sec=2):
 
 
 def split_wav(
-    audio_file, target_dir="raw", max_sec=12, min_silence_dur_ms=700, min_sec=2
+    audio_file, target_dir="/content/slice-and-transcribe/raw", max_sec=12, min_silence_dur_ms=700, min_sec=2
 ):
     margin = 200  # ミリ秒単位で、音声の前後に余裕を持たせる
     upper_bound_ms = max_sec * 1000  # これ以上の長さの音声は無視する
@@ -87,8 +87,8 @@ if __name__ == "__main__":
     parser.add_argument("--min_silence_dur_ms", "-s", type=int, default=700)
     args = parser.parse_args()
 
-    input_dir = "inputs"
-    target_dir = "raw"
+    input_dir = "/content/slice-and-transcribe/inputs"
+    target_dir = "/content/slice-and-transcribe/raw"
     min_sec = args.min_sec
     max_sec = args.max_sec
     min_silence_dur_ms = args.min_silence_dur_ms
