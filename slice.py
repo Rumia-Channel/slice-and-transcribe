@@ -82,7 +82,7 @@ def split_wav(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--max_sec", "-M", type=int, default=12)
+    parser.add_argument("--max_sec", "-M", type=int, default=15)
     parser.add_argument("--min_sec", "-m", type=int, default=2)
     parser.add_argument("--min_silence_dur_ms", "-s", type=int, default=700)
     args = parser.parse_args()
